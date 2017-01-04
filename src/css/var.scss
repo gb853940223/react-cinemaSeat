@@ -1,0 +1,75 @@
+//自适应函数
+$winWidth:640;
+@function k($value){
+  @return ($value/($winWidth/10)) * 1rem;
+}
+//html背景色
+$htmlbg:#fff;
+//head背景色
+$headbg: #0084e6;
+//边框颜色
+$borderColor: #f4f4f4;
+//input边框颜色
+$borderInput: #eee;
+//红色边框提醒
+.warn-red {
+  border:1px solid red !important;
+}
+//隐藏样式
+.hide {
+  display: none !important;
+}
+//清除浮动
+.clearfix::after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  zoom: 1;
+}
+//左浮动
+.float_left {
+  float: left;
+}
+//右浮动
+.float_right {
+  float: right;
+}
+//兼容性动画执行函数
+@mixin animateRun($name,$time){
+  animation: $name;
+  animation-duration: $time;
+  animation-fill-mode: forwards;
+  //谷歌
+  -webkit-animation: $name;
+  -webkit-animation-duration: $time;
+  -webkit-animation-fill-mode: forwards;
+  //火狐
+  -moz-animation: $name;
+  -moz-animation-duration: $time;
+  -moz-animation-fill-mode: forwards;
+  //opare
+  -o-animation: $name;
+  -o-animation-duration: $time;
+  -o-animation-fill-mode: forwards;
+  //IE
+  -ms-animation: $name;
+  -ms-animation-duration: $time;
+  -ms-animation-fill-mode: forwards;
+}
+//座位图背景图
+@mixin seat($type) {
+  width: k(30);
+  height: k(27);
+  background-repeat: no-repeat;
+  background-size: k(30) k(27);
+  background-position: k(6) k(15);
+  @if($type == 'null'){
+    background-image: url('images/sit-null.png');
+  }@else if($type == 'ok'){
+    background-image: url('images/sit-ok.png');
+  }
+}

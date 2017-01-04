@@ -1,0 +1,56 @@
+.seats {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  .seatInfo {
+    width: 100%;
+    height: k(570);
+    transform: translateZ(0);
+    // transform: scale(2);
+    .row {
+      text-align: center;
+      span {
+        font-size: k(16);
+        display: inline-block;
+        padding:k(15) k(6);
+      }
+      .seat-null {
+        @include seat('null');
+      }
+      .seat-ok {
+        @include seat('ok');
+      }
+    }
+  }
+  .seatCount {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateZ(0);
+    transform-origin: left center;
+    ul {
+      background-color:#626262;
+      border-radius: k(20);
+      li {
+        font-size: k(22);
+        height: k(57);
+        width: k(50);
+        text-align: center;
+        line-height: k(57);
+        color: #fff;
+      }
+    }
+  }
+}
+// 临时测试开始
+.seatResult {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+    text-align: right;
+    font-size: k(30);
+
+}
+
+// 临时测试结束

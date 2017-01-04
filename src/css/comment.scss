@@ -1,0 +1,146 @@
+//头部样式
+.head {
+  width: 100%;
+  height: k(130);
+  background-color: $headbg;
+  position: relative;
+  .headbox {
+    width: k(150);
+    height: k(60);
+    position: absolute;
+    top: k(50);
+    left: 50%;
+    margin-left: k(-75);
+    text-align: center;
+    .title {
+      span {
+        font-size: k(26);
+        color: #fff;
+      }
+    }
+    .arrowDown {
+      @include sprite('arrowDown');
+      margin:12px auto 0;
+    }
+  }
+}
+//自动补全功能样式
+.autoComplete {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  .head {
+    width:100%;
+    height: k(130);
+    background-color: $headbg;
+    position: relative;
+    .arrowLeft {
+      @include sprite('arrowLeft');
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: k(30);
+      margin-top: k(-21);
+    }
+    span {
+      font-size: k(26);
+      color: #fff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin:auto;
+      display: block;
+      width: k(110);
+      height: k(30);
+      line-height: k(30);
+    }
+  }
+  .input {
+    border-bottom: 1px solid $borderColor;
+    background-color: #fff;
+    input {
+      width: k(514);
+      height: k(50);
+      border:1px solid $borderInput;
+      font-size: k(26);
+      border-radius: 4px;
+      display: block;
+      margin:k(14) auto;
+      text-indent: 10px;
+    }
+  }
+  ul {
+    background-color: #f7f7f7;
+    border-top: 1px solid $borderColor;
+    width:100%;
+    height: 100%;
+    overflow-y: auto;
+    li {
+      font-size: k(26);
+      color: #333;
+      height: k(78);
+      line-height: k(78);
+      background-color: #fff;
+      border-bottom:1px solid $borderColor;
+      text-indent: k(20);
+    }
+    li:first-child {
+      margin: k(18) 0;
+    }
+  }
+}
+//日历样式
+.datepicker {
+  width: 100%;
+  height: k(60);
+  background-color: #f7f7f7;
+  border-bottom: 1px solid $borderColor;
+  .datepickerBox {
+    width: k(360);
+    height: 100%;
+    margin:0 auto;
+    line-height: k(60);
+    overflow: hidden;
+    .image,.day,.week,.arrowDown {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .image {
+      @include sprite('datepicker');
+    }
+    .day,.week {
+      color: #333;
+      font-size: k(26);
+    }
+    .day {
+      margin: 0 k(20);
+    }
+    .arrowDown {
+      @include sprite('arrowDownup');
+      margin-left: k(10);
+    }
+  }
+}
+//主体内容title样式
+.moreTitle {
+  width: 100%;
+  height: k(86);
+  .titleBox {
+    width: k(600);
+    height: 100%;
+    margin: 0 auto;
+  }
+  .titleName,.more {
+    height: 100%;
+    line-height: k(86);
+    span {
+      font-size: k(30);
+      color: #333;
+    }
+  }
+}

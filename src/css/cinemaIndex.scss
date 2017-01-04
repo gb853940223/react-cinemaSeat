@@ -1,0 +1,95 @@
+.dataAll {
+  width: 100%;
+  height: k(258);
+  background-color: #fff;
+  border-bottom: 1px solid $borderColor;
+  overflow: hidden;
+  position: relative;
+  .prevDay,.nextDay {
+    position: absolute;
+    top: 50%;
+    margin-top: k(-60);
+    border: 2px solid #eee;
+    span {
+      font-size: k(22);
+      color: #666;
+      writing-mode: vertical-rl;
+      display:block;
+      width: k(68);
+      height: k(120);
+      text-align: center;
+      line-height: k(68);
+    }
+  }
+  .prevDay {
+    left:0;
+    border-left: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .nextDay {
+    right: 0;
+    border-right: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  .dataAllBox {
+    width: k(446);
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    .showData {
+      width: 100%;
+      height: k(100);
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      .showDataAll,.showDataIncrease {
+        width: 49%;
+        p {
+          text-align: center;
+        }
+      }
+      .showDataAll {
+        border-right: 1px solid #eee;
+        p:first-child {
+          font-size: k(50);
+          color: #444;
+          i {
+            font-size: k(26);
+          }
+        }
+        p:last-child {
+          font-size: k(26);
+          color: #333;
+        }
+      }
+      .showDataIncrease {
+
+        p:first-child {
+          font-size: k(50);
+          color: #444;
+        }
+        p:last-child {
+          font-size: k(26);
+          color: #333;
+        }
+      }
+    }
+    .showTime {
+      width: 100%;
+      position: absolute;
+      bottom: k(30);
+      left: 0;
+       p {
+         text-align: center;
+         font-size: k(22);
+         color: #888;
+       }
+    }
+  }
+}

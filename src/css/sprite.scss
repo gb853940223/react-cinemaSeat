@@ -1,0 +1,31 @@
+$icoAddress:  "images/icon.png";
+$key: 64;
+
+
+
+@mixin sprite($type){
+  background-image: url($icoAddress);
+  background-repeat: no-repeat;
+  background-size: k(480) k(600);
+  @if($type=="xiaozhu"){
+    width: k(112);
+    height: k(124);
+    background-position: 0px k(-380);
+  }@else if($type=="arrowDown"){
+    width: k(24);
+    height: k(14);
+    background-position: k(-200) k(-260);
+  }@else if($type == "arrowLeft"){
+    width: k(24);
+    height: k(42);
+    background-position: k(-400) k(-80);
+  }@else if($type == "datepicker"){
+    width: k(36);
+    height: k(36);
+    background-position: 0px k(-256);
+  }@else if($type == "arrowDownup"){
+    width: k(20);
+    height: k(12);
+    background-position: 0px k(-340);
+  }
+}

@@ -1,0 +1,88 @@
+//影院搜索动画
+.rightToLeft {
+  @include animateRun(rightToLeft,1s);
+}
+.leftToRight {
+  @include animateRun(leftToRight,1s);
+}
+
+@keyframes  rightToLeft {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+@-webkit-keyframes  rightToLeft {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+@-o-keyframes  rightToLeft {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+@-moz-keyframes  rightToLeft {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+@-ms-keyframes  rightToLeft {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes leftToRight {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%
+  }
+}
+@-webkit-keyframes leftToRight {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@-o-keyframes leftToRight {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@-moz-keyframes leftToRight {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@-ms-keyframes leftToRight {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
