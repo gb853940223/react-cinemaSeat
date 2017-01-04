@@ -1,1 +1,1 @@
-# https-github.com-iammvp-react-redux-router-start-kit
+react选座图，可实现放大和位移功能
